@@ -46,8 +46,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/layout/styles.scss",
+               "src/styles/layout/custom-theme.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                  "src/styles/settings/"
+              ]
+          },
             "scripts": [],
             "es5BrowserSupport": true
           },

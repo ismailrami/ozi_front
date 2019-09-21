@@ -1,0 +1,14 @@
+<mat-toolbar class="header-toolbar mat-elevation-z6">
+  <button class="sidenav-toggle" aria-label="Toggle Sidebar" (click)="toggleSidenav()">
+      <mat-icon class="menu-icon" aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <div class="all-menu">
+      <a [routerLink]="''">
+          <img alt="angular" class="ozitem_logo" src="../../../assets/img/Ozitem.png">
+      </a>
+  </div>
+  <div class="desktop-menu">
+      <span class="spacer"></span>
+      <a *ngFor="let menu_item of menu; let i = index" [routerLink]="[menu_item.url]" rel="noopener" mat-button class="menu-item">{{ menu_item.name }}</a>
+  </div>
+</mat-toolbar>

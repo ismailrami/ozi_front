@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
- 
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -16,7 +16,9 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
- 
+import { MatSelectModule } from '@angular/material/select';
+import { MaterialFileInputModule } from 'ngx-material-file-input';
+
 @NgModule({
     imports: [
         MatButtonModule,
@@ -34,10 +36,12 @@ import { MatTooltipModule } from '@angular/material/tooltip';
         MatStepperModule,
         MatTableModule,
         MatToolbarModule,
-        MatTooltipModule
+        MatTooltipModule,
+        MatSelectModule,
+        MaterialFileInputModule
     ],
     declarations: [ ],
-    exports:[ 
+    exports:[
         MatButtonModule,
         MatCardModule,
         MatExpansionModule,
@@ -53,8 +57,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
         MatStepperModule,
         MatTableModule,
         MatToolbarModule,
-        MatTooltipModule
+        MatTooltipModule,
+        MatSelectModule,
+        MaterialFileInputModule
     ]
 })
- 
+
 export class MaterialModule { }

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  restApi: 'api/'
+  restApi: 'api/',
+  apiURL: 'http://192.168.24.20/public/api/'
 
 };
 

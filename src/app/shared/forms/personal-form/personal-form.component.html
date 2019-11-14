@@ -1,44 +1,62 @@
 
 <form [formGroup]="form">
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Nom" formControlName="firstName" required>
+        <input matInput placeholder="Nom" formControlName="first_name" required>
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Prénom" formControlName="lastName" required>
+        <input matInput placeholder="Prénom" formControlName="last_name" required>
     </mat-form-field>
     <mat-form-field class="example-full-width">
         <input matInput placeholder="Email" type="email" formControlName="email" required>
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Ville" formControlName="firstName" >
+        <input matInput placeholder="Ville" formControlName="city" >
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Tel mobile" formControlName="lastName" required>
+        <input matInput placeholder="Tel mobile" formControlName="tel_mobile" required>
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Permis" formControlName="firstName" required>
+      <mat-label>Permis</mat-label>
+      <mat-select formControlName="driver_licence" required>
+          <mat-option *ngFor="let element of driver" [value]="element.value" > {{ element.viewValue }}</mat-option>
+      </mat-select>
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Fonction" formControlName="lastName" required>
+      <mat-label>Fonction</mat-label>
+        <mat-select formControlName="function"  required>
+            <mat-option *ngFor="let element of fun" [value]="element.value"> {{ element.viewValue }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Source</mat-label>
+        <mat-select formControlName="source"  required>
+            <mat-option *ngFor="let element of origin" [value]="element.value"> {{ element.viewValue }}</mat-option>
+         </mat-select>
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Prétention salariale" formControlName="firstName" required>
+        <input matInput placeholder="Prétention salariale" formControlName="pre_sal" required>
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Salaire actuel" formControlName="lastName" required>
+        <input matInput placeholder="Salaire actuel" formControlName="act_sal" required>
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Mobilité" formControlName="lastName" >
+        <input matInput placeholder="Mobilité" formControlName="mobility" >
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Commentaire prise de ref" formControlName="lastName" >
+        <input matInput placeholder="Commentaire prise de ref" formControlName="ref_com" >
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Commentaire RH" formControlName="lastName" >
+        <input matInput placeholder="Commentaire RH" formControlName="rh_com" >
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Disponibilité" formControlName="lastName" required>
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-        <input matInput placeholder="Statut candidature" formControlName="lastName" required>
-    </mat-form-field>
+        <mat-label>Disponibilité</mat-label>
+          <mat-select formControlName="disponibility"  required>
+              <mat-option *ngFor="let element of dispo" [value]="element.value"> {{ element.value }}</mat-option>
+           </mat-select>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+          <mat-label>Statut Candidature</mat-label>
+            <mat-select formControlName="status"  required>
+                <mat-option *ngFor="let element of stat" [value]="element.value"> {{ element.value }}</mat-option>
+             </mat-select>
+      </mat-form-field>

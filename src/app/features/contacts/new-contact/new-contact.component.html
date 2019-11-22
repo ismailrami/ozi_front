@@ -1,52 +1,22 @@
-<!-- <div layout="row" layout-align="space-between center" flex class="layout-align-space-between-center layout-row flex">
-  <div class="top-container">
-      <span class="md-lgn-headline">{{ title }}</span>
-      <button class="btn-secondary" mat-mini-fab matTooltip="Home">
-          <mat-icon routerLink="/" aria-label="Home">home</mat-icon>
-      </button>
-  </div>
-</div> -->
+
 <div class="basic-container mat-elevation-z8" style="margin-top: 1%">
   <mat-horizontal-stepper [linear]="true" #stepper>
-
       <!-- Step 1: Personal Form -->
-      <mat-step [stepControl]="personalForm">
+      <mat-step [stepControl]="personalForm.form">
           <ng-template matStepLabel>Informations Personnelles</ng-template>
           <app-personal-form [form]="personalForm"></app-personal-form>
           <div>
-              <button mat-raised-button matStepperNext type="button" matTooltip="Next Step" class="btn-primary">Suivant</button>
+              <button mat-button matStepperNext matTooltip="Next Step" class="btn-primary">Suivant</button>
           </div>
       </mat-step>
-
-      <!-- Step 1: Work Form -->
-      <!-- <mat-step [stepControl]="workForm">
-          <ng-template matStepLabel>Work</ng-template>
-          <app-work-form [form]="workForm"></app-work-form>
-          <div class="top-15">
-              <button mat-raised-button matStepperPrevious>Previous</button> 
-              <button class="btn-primary" mat-raised-button matStepperNext>Next</button>
-          </div>
-      </mat-step> -->
-
-      <!-- Step 3: Address Form -->
-      <mat-step [stepControl]="addressForm">
+      <!-- Step 2: file Form -->
+      <mat-step [stepControl]="fileForm.form">
           <ng-template matStepLabel>Documents</ng-template>
-          <app-address-form [form]="addressForm"></app-address-form>
+          <app-file-form [form]="fileForm"></app-file-form>
           <div>
-              <button mat-raised-button matStepperPrevious>Previous</button> 
+              <button mat-raised-button matStepperPrevious>Retour</button>
               <button class="btn-success" mat-raised-button cdkFocusInitial (click)="save()">Valider</button>
           </div>
       </mat-step>
-
-      <!-- Step 4: Result Form -->
-      <!-- <mat-step>
-          <ng-template matStepLabel>Review</ng-template>
-          <app-result-form [formData]="getContact()"></app-result-form>
-          <div class="top-15">
-              <button mat-raised-button matStepperPrevious>Previous</button> 
-              <button class="btn-success" mat-raised-button cdkFocusInitial (click)="save()">Save</button>
-          </div>
-      </mat-step> -->
-      
   </mat-horizontal-stepper>
 </div>

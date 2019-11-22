@@ -33,8 +33,15 @@ export class ApiService {
 
   addUser(user): Observable<any>{
     return this.http.post<any>(this.url + 'users' ,user, this.httpOptions).pipe(
-      tap(_ => console.log('fetched product')),
-      catchError(this.handleError<any>('getProduct'))
+      tap(_ => console.log('')),
+      catchError(this.handleError<any>(''))
+    );
+  }
+
+  login(param): Observable<any>{
+    return this.http.post<any>(this.url + 'login' ,param, this.httpOptions).pipe(
+      tap(_ => console.log('')),
+      catchError(this.handleError<any>(''))
     );
   }
 }

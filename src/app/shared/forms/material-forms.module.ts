@@ -1,37 +1,33 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
- 
+
 import { MaterialModule } from '@app/material/material.module';
- 
-import { AddressFormComponent } from './address-form/address-form.component';
+
+import { FileFormComponent } from './file-form/file-form.component';
 import { PersonalFormComponent } from './personal-form/personal-form.component';
-import { ResultFormComponent } from './result-form/result-form.component';
-import { WorkFormComponent } from './work-form/work-form.component';
- 
+import { LoginFormComponent } from './login-form/login-form.component'
+
 @NgModule({
     imports: [
         CommonModule,
-        FormsModule, 
+        FormsModule,
         ReactiveFormsModule,
         MaterialModule
     ],
     declarations: [
-        AddressFormComponent,
+        FileFormComponent,
+        LoginFormComponent,
         PersonalFormComponent,
-        ResultFormComponent,
-        WorkFormComponent
     ],
-    exports:[ 
+    exports:[
         MaterialModule,
-        AddressFormComponent,
+        FileFormComponent,
         PersonalFormComponent,
-        ResultFormComponent,
-        WorkFormComponent
+        LoginFormComponent,
     ],
     entryComponents: [
-        WorkFormComponent
     ]
 })
- 
+
 export class MaterialFormsModule { }

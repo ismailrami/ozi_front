@@ -6,10 +6,10 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
- 
+
 export class AppComponent {
     title = 'Ozitem';
-   
+
     constructor(
       private router: Router
 
@@ -18,8 +18,8 @@ export class AppComponent {
     menu: Array<Object> = [
         { name: 'ADMINISTRATION', url: '/'},
         { name: 'DOSSIER DE CANDIDATURE', url :"/add-contact"},
-        { name: 'ITOP', redirectTo: 'https://www.cc28tech.com/cathy-wun' },
-        { name: 'ENTRETIEN', redirectTo: 'https://www.cc28tech.com/cathy-wun' },
-        { name: 'QUITTER', redirectTo: 'https://www.cc28tech.com/cathy-wun' }
+        { name: 'ITOP', redirectTo: 'https://itoprct.ozitem.lan/' },
+        { name: 'ENTRETIEN', url: '/interview' },
+        { name: 'QUITTER', url: '/login' }
     ];
 }

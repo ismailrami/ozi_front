@@ -14,7 +14,6 @@ export class PersonalFormComponent {
     // Receive FormGroup instance from the parent 'NewContactComponent'
     @Input() form: FormGroup;
 
-    @Output() driver_licence_data = new EventEmitter<string>();
 
     driver : Select[] = [
       {value: 'oui' , viewValue : 'Oui'},
@@ -100,11 +99,5 @@ export class PersonalFormComponent {
     constructor() {
     }
 
-    compareFunction(o1: any, o2: any) {
-      if(o1.name == o2.name && o1.id == o2.id ) return true; else return false;
-    }
 
-    setDriverLicence(event) {
-      this.form.controls.driver_licence = event.value;
-    }
 }

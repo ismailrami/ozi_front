@@ -1,8 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-
-import { Contact } from '../shared/contact';
 import { ApiService } from '../../../core/services/api.service';
 
 @Component ({
@@ -13,9 +11,8 @@ import { ApiService } from '../../../core/services/api.service';
 
 export class NewContactComponent implements OnInit {
 
-    title = 'Create Contact';
     personalForm: FormGroup;
-    addressForm: FormGroup;
+    fileForm: FormGroup;
 
 
     constructor(
@@ -25,7 +22,7 @@ export class NewContactComponent implements OnInit {
 
     ngOnInit() {
         this.buildPersonalForm();
-        this.buildAddressForm();
+        this.buildFileForm();
     }
 
     buildPersonalForm(): void {
@@ -48,12 +45,9 @@ export class NewContactComponent implements OnInit {
         });
     }
 
-    buildAddressForm(): void {
-        this.addressForm = this.formBuilder.group({
-            'street': ['', Validators.required],
-            'city': ['', Validators.required],
-            'state': ['', Validators.required ],
-            'zip': ['', Validators.required],
+    buildFileForm(): void {
+        this.fileForm = this.formBuilder.group({
+            'file': ['', Validators.required],
         });
     }
 
@@ -71,16 +65,16 @@ export class NewContactComponent implements OnInit {
     }
 
     /**
-     * Return true if at least either personForm or addressForm is invalid
+     * Return true if at least either personForm or fileForm is invalid
      */
     invalidForms(): boolean {
         return (this.personalForm.invalid ||
-            this.addressForm.invalid);
+            this.fileForm.invalid);
     }
 
 
-    getContact(): Contact {
-        return { ...this.personalForm.value,...this.addressForm.value };
+    getContact() {
+        return { ...this.personalForm.value,...this.fileForm.value };
     }
 
 }

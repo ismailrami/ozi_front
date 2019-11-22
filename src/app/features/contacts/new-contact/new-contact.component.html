@@ -9,10 +9,10 @@
               <button mat-button matStepperNext matTooltip="Next Step" class="btn-primary">Suivant</button>
           </div>
       </mat-step>
-      <!-- Step 2: Address Form -->
-      <mat-step [stepControl]="addressForm.form">
+      <!-- Step 2: file Form -->
+      <mat-step [stepControl]="fileForm.form">
           <ng-template matStepLabel>Documents</ng-template>
-          <app-address-form [form]="addressForm"></app-address-form>
+          <app-file-form [form]="fileForm"></app-file-form>
           <div>
               <button mat-raised-button matStepperPrevious>Retour</button>
               <button class="btn-success" mat-raised-button cdkFocusInitial (click)="save()">Valider</button>

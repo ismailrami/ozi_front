@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 
 import { MaterialModule } from '@app/material/material.module';
 
-import { Logger } from './logger/logger.service';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { throwIfAlreadyLoaded } from './module-import-guard';
@@ -29,7 +28,6 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
         MainLayoutComponent
     ],
     providers: [
-        Logger,
         ToastService
     ]
 })

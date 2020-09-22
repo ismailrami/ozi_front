@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   restApi: 'api/',
-  apiURL: 'http://192.168.24.20/public/api/'
+  apiURL: 'https://ozilara.local/api/'
 
 };
 

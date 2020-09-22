@@ -9,6 +9,7 @@ import { ContactsRoutingModule } from './contacts-routing.module';
 import { ContactService } from './shared/contact.service';
 import { NewContactComponent } from './new-contact/new-contact.component';
 import { CommonModule } from '@angular/common';
+import { InterviewComponent } from './interview/interview.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { CommonModule } from '@angular/common';
     declarations: [
         ContactDetailComponent,
         ContactListComponent,
-        NewContactComponent
+        NewContactComponent,
+        InterviewComponent
     ],
     providers: [
         ContactService

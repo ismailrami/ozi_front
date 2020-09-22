@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { NewContactComponent } from './new-contact/new-contact.component';
 import { LoginFormComponent } from '@app/shared/forms/login-form/login-form.component';
+import { InterviewComponent } from './interview/interview.component';
 
 const contactsRoutes: Routes = [
     // 1st Route
@@ -11,7 +12,7 @@ const contactsRoutes: Routes = [
     // 2nd Route
     {  path: 'add-contact', component: NewContactComponent , pathMatch : 'full'},
     //3rd path
-    //{ path: 'inteview', component: intervieComponent }
+    { path: 'interview', component: InterviewComponent , pathMatch : 'full'},
 
     { path: 'login', component: LoginFormComponent, pathMatch : 'full' }
 ];

@@ -55,7 +55,6 @@ export class ContactListComponent implements OnInit {
 
             this.is_loaded= Promise.resolve(true)
         });
-        console.log(this.dataSource.data);
     }
 
     editContact(id: number): void {
